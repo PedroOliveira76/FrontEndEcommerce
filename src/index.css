@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+  background-color: black;
+  width: 8px;
+
+}
+body::-webkit-scrollbar-thumb{
+  background-color: white;
+  
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+.section::-webkit-scrollbar{
+  background-color: black;
+  height: 8px;
+}
+
+.section::-webkit-scrollbar-thumb{
+  background-color: white;
+}
+
+.jogos-em-alta{
+  background-image: url('/assets/bg-video-2.png');
+  background-position: center;
+  background-size: contain;
+}
+.screenLog{
+  background-image: url('/assets/bdlogin.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@layer components {
+  .smooth-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .smooth-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
